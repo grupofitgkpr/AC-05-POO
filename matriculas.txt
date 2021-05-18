@@ -1,0 +1,6 @@
+1000:Estrutura de Dados
+1000:Programacao Orientada a Objetos
+1000:Sistemas Operacionais
+1001:Programacao Orientada a Objetos
+1001:Estrutura de Dados
+1002:Sistemas Operacionais
