@@ -39,6 +39,7 @@ public class Faculdade {
                 
                 linha = br.readLine();
             }
+            br.close();
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -68,6 +69,7 @@ public class Faculdade {
                 estudantes.add(estudante);
                 linha = br.readLine();
             }
+            br.close();
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -93,6 +95,7 @@ public class Faculdade {
                 disciplinas.get(indDisciplina).addMatricula(matricula);
                 linha = br.readLine();
             }
+            br.close();
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
