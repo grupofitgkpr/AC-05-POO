@@ -4,4 +4,4 @@
 1001:Sistemas Operacionais
 1001:Estrutura de Dados
 1002:Sistemas Operacionais
-1003:Programacao Orientada a Objetos
+1003:Estrutura de Dados
