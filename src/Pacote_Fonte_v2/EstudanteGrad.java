@@ -27,7 +27,7 @@ public class EstudanteGrad extends Estudante {
     @Override
     public String lista() {
         return "Id: " + id + " | Nome: " + nome + " | Créditos: " 
-                + this.getTotalCreditos() + " | AC: " + horasAtividades + " horas";
+                + getTotalCreditos() + " | AC: " + horasAtividades + " horas";
     }
     
     @Override
