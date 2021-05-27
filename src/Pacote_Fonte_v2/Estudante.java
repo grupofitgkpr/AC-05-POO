@@ -5,16 +5,17 @@ import java.util.ArrayList;
 public abstract class Estudante {
 
     // Atributos
-    private long id;
-    private String nome;
-    private String email;
-    private ArrayList<Matricula> matriculas = new ArrayList<>();
+    protected long id;
+    protected String nome;
+    protected String email;
+    protected ArrayList<Matricula> matriculas;
 
     // Construtores
     public Estudante(long id, String nome, String email) {
         this.id = id;
         this.nome = nome;
         this.email = email;
+        matriculas = new ArrayList<>();
     }
 
     // Métodos Públicos
@@ -64,21 +65,9 @@ public abstract class Estudante {
         this.matriculas = matriculas;
     }
     
-    public int getTotalCreditos() {
-        int soma = 0;
-        ArrayList<Disciplina> disciplinas = this.getDisciplinasMatriculadas();
-        for (Disciplina disciplina : disciplinas){
-            soma += disciplina.getCreditos();
-        }
-        return soma;
-    }
-
-    public String lista() {
-        return  "Id: " + this.getId() + " | Nome: " + this.getNome() + " | Créditos: " + this.getTotalCreditos();
-    }
+    public abstract int getTotalCreditos();
     
-    public String lista2() {
-        return  "Id: " + this.getId() + " | Nome: " + this.getNome() + " | Email: " 
-                + this.getEmail() + " | Créditos: " + this.getTotalCreditos();
-    }
+    public abstract String lista();
+    
+    public abstract String lista2();
 }

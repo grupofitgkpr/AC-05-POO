@@ -7,12 +7,13 @@ public class Disciplina {
     // Atributos
     private String codigo;
     private int creditos;
-    private ArrayList<Matricula> matriculas = new ArrayList<>();
+    private ArrayList<Matricula> matriculas;
 
     // Construtores
     public Disciplina(String codigo, int creditos) {
         this.codigo = codigo;
         this.creditos = creditos;
+        matriculas = new ArrayList<>();
     }
     
     // Métodos Públicos
@@ -21,7 +22,7 @@ public class Disciplina {
     }
     
     public ArrayList getEstudantesMatriculados() { // Retorna uma lista de estudantes matriculados
-       ArrayList<Estudante> estudantesMatriculados = new ArrayList<Estudante>();
+       ArrayList<Estudante> estudantesMatriculados = new ArrayList<>();
         for (Matricula matricula : matriculas) {
             Estudante estudante = matricula.getEstudante();
             estudantesMatriculados.add(estudante);

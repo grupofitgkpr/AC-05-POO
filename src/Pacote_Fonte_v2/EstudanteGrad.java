@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Pacote_Fonte_v2;
 
-/**
- *
- * @author PedroHODL
- */
+import java.util.ArrayList;
+
 public class EstudanteGrad extends Estudante {
-    private int horasAtividades;
+    private final int horasAtividades;
     
     public EstudanteGrad(long id, String nome, String email, int horasAtividades) {
         super(id, nome, email);
@@ -23,16 +16,23 @@ public class EstudanteGrad extends Estudante {
     
     @Override
     public int getTotalCreditos(){
-        return horasAtividades + super.getTotalCreditos();
+        int soma = horasAtividades;
+        ArrayList<Disciplina> disciplinas = this.getDisciplinasMatriculadas();
+        for (Disciplina disciplina : disciplinas){
+            soma += disciplina.getCreditos();
+        }
+        return soma;
     }
     
     @Override
     public String lista() {
-        return super.lista() + " | AC: " + horasAtividades + " horas";
+        return "Id: " + id + " | Nome: " + nome + " | Créditos: " 
+                + this.getTotalCreditos() + " | AC: " + horasAtividades + " horas";
     }
     
     @Override
     public String lista2() {
-        return super.lista2() + " | AC: " + horasAtividades + " horas";
+        return "Id: " + id + " | Nome: " + nome + " | Créditos: " + " | Email: " 
+                + email + this.getTotalCreditos() + " | AC: " + horasAtividades + " horas";
     }
 }

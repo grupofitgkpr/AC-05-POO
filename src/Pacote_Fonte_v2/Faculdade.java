@@ -9,13 +9,16 @@ public class Faculdade {
 
     // Atributos
     private String nome;
-    private ArrayList<Estudante> estudantes = new ArrayList<>();
-    private ArrayList<Disciplina> disciplinas = new ArrayList<>();
-    private ArrayList<Matricula> matriculas = new ArrayList<>();
+    private ArrayList<Estudante> estudantes;
+    private ArrayList<Disciplina> disciplinas;
+    private ArrayList<Matricula> matriculas;
 
     // Construtores
     public Faculdade(String nomeFaculdadeEsperado) {
         this.nome = nomeFaculdadeEsperado;
+        estudantes = new ArrayList<>();
+        disciplinas = new ArrayList<>();
+        matriculas = new ArrayList<>();
     }
     
     // Métodos públicos
