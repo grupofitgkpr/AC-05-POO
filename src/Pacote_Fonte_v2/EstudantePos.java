@@ -39,6 +39,6 @@ public class EstudantePos extends Estudante {
     @Override
     public String lista2() {
         return "Id: " + id + " | Nome: " + nome + " | Email: " + email 
-                + " | Créditos: " + this.getTotalCreditos() + " | Tema: " + tema + " | Orientador: " + orientador;
+                + " | Créditos: " + getTotalCreditos() + " | Tema: " + tema + " | Orientador: " + orientador;
     }
 }
